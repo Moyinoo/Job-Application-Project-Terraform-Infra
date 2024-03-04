@@ -41,7 +41,7 @@ provider "aws" {
   region = var.aws_region
   default_tags {
     tags = {
-      Team        = "Tentek DevOps"
+      Author        = "AWS-Engineer Moyin"
       Project     = "DemoApp"
       Environment = "Prod"
       ManagedBy   = "Terraform"
