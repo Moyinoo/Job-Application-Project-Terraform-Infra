@@ -35,7 +35,7 @@ resource "aws_security_group" "bastion_host" {
 
 # Openvpn instance specification
 resource "aws_instance" "bastion_host" {
-  ami                    = "ami-0440d3b780d96b29d"
+  ami                    = "${data.aws_ami.latest-ubuntu.id}"
   instance_type          = "t3.small"
   vpc_security_group_ids = [aws_security_group.bastion_host.id]
   key_name               = aws_key_pair.devops.id
@@ -72,3 +72,5 @@ data "aws_ami" "latest-ubuntu" {
     values = ["hvm"]
   }
 }
+
+ 
