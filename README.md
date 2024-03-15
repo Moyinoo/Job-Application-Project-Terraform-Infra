@@ -106,17 +106,4 @@ After deploying infrastructure we moving to application section desribed in appl
 | [aws_instance.bastion_host](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
 | [aws_ami.latest-ubuntu](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
 
-## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_base_domain"></a> [base\_domain](#input\_base\_domain) | Base domain for our DNS records (e.g. "moyinopoola.com") | `string` | n/a | yes |
-| <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | AWS region to create our resources (e.g. "us-east-1") | `string` | n/a | yes |
-| <a name="input_tag_env"></a> [tag\_env](#input\_tag\_env) | Tag environment (e.g. "prod") | `string` | n/a | yes |
-| <a name="input_id_rsa"></a> [id\_rsa](#input\_id\_rsa) | Public ssh key for ec2 instances (e.g. "ssh-rsa XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...") | `string` | n/a | yes |
-| <a name="input_datadog_api_key"></a> [datadog\_api\_key](#input\_datadog\_api\_key) | DataDog api key. Region sensitive | `string` | n/a | yes |
-| <a name="input_datadog_application_key"></a> [datadog\_application\_key](#input\_datadog\_application\_key) | DataDog application key. Region sensitive | `string` | n/a | yes |
-| <a name="input_datadog_region"></a> [datadog\_region](#input\_datadog\_region) | DataDog region (e.g. "us5.datadoghq.com") | `string` | n/a | yes |
-| <a name="input_registrationToken"></a> [registrationToken](#input\_registrationToken) | Token for github actions self-hosted runners (e.g. ghp\_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX) | `string` | n/a | yes |
-| <a name="input_ci_project_repo"></a> [ci\_project\_repo](#input\_ci\_project\_repo) | Git repo with source files for CI (e.g. "account-name/repository-name") | `string` | n/a | yes |
-| <a name="input_cd_project_repo"></a> [cd\_project\_repo](#input\_cd\_project\_repo) | Git repo with source files for CD (e.g. "account-name/repository-name") | `string` | n/a | yes |
