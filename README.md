@@ -3,10 +3,6 @@
 
 This project is intended for demostrating practical application of knowledge in the field of cloud technology and DevOps, as well as the deployment of web applications with the best practices. The stack is designed to cover a number of technologies and simultaneously carry the functional and meaningful load on each. This project applies a declarative approach to infrastructure building and shows the deployment automation process for the entire stack. All components of the project and their relationships are considered in detail to see how the application and its operation services work in the actual cloud on a concrete example.
 
-# Main goal
-
-Gain practical Infrastructure as code (IaC) skills. Learn how to deploy such applications in the cloud cluster.
-
 # Tools Utilized
 
 1. Terraform cli 
@@ -23,16 +19,11 @@ The Infrastucture is a Hybrid setup with the cloud infrastructure deployed on AW
 NOTE! to reduce cost, the some resources in the aws cloud were not deployed (e.g. Storage Gateway), since there's no onsite available to deploy an agent. 
 
 # Infrastucture Architecture
-![Screenshot](img/Cloud Architecture.png)
+![Screenshot](img/CloudArchitecture.png)
 
 # Application deployment
 
-After deploying infrastructure we moving to application section desribed in application repository - https://github.com/tntk-io/tntk-ci.
-
-# Removing Infrastructure
-
-1. Login to argo CD (e.g. "https://argo.prod.example.com/") and delete "demo" application.
-2. Destroy. Open "Settings" → "Destruction and Deletion" → inside "Manually destroy" block push "Queue destroy plan" button. After planning we can destroy resources – it will executes the changes defined by our Terraform configuration to destroy resources. It will take about 30 min to destroy all resources.
+After deploying infrastructure we moving to application section desribed in application repository - https://github.com/moyinoo/Job-App-Project-ci.
 
 
 
