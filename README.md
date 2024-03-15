@@ -16,7 +16,7 @@ This project is intended for demostrating practical application of knowledge in 
 # Infrastructure deployment
 
 The Infrastucture is a Hybrid setup with the cloud infrastructure deployed on AWS and an onsite environment exposed to the cloud through aws Storage Gateway. The infrastructure is deployed by trigarring a run on terafform cloud which is connected to this github repo. 
-NOTE! to reduce cost, the some resources in the aws cloud were not deployed (e.g. Storage Gateway), since there's no onsite available to deploy an agent. 
+NOTE!! to reduce cost, some resources shown in the architecture diagram were not deployed (e.g. Storage Gateway), since there's no onsite available to deploy an agent. 
 
 # Infrastucture Architecture
 ![Screenshot](img/CloudArchitecture.png)
