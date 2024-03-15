@@ -1,37 +1,29 @@
 <!-- BEGIN_TF_DOCS -->
 # Project overview
 
-This educational project is intended for the practical application of knowledge in the field of cloud technology and DevOps, as well as the deployment of web applications with the best practices. The stack is designed to cover the maximum number of technologies and simultaneously carry the functional and meaningful load on each. This project applies a declarative approach to infrastructure building and shows the deployment automation process for the entire stack. All components of the project and their relationships are considered in detail to see how the application and its operation services work in the actual cloud on a concrete example.
+This project is intended for demostrating practical application of knowledge in the field of cloud technology and DevOps, as well as the deployment of web applications with the best practices. The stack is designed to cover a number of technologies and simultaneously carry the functional and meaningful load on each. This project applies a declarative approach to infrastructure building and shows the deployment automation process for the entire stack. All components of the project and their relationships are considered in detail to see how the application and its operation services work in the actual cloud on a concrete example.
 
 # Main goal
 
 Gain practical Infrastructure as code (IaC) skills. Learn how to deploy such applications in the cloud cluster.
 
-# Requirements and tools
+# Tools Utilized
 
-1. Terraform cli (https://developer.hashicorp.com/terraform/install)
+1. Terraform cli 
 2. AWS account (where everything will be deployed)
-3. AWS account where our host_zone is located
-4. Domain (e.g. "example.com")
-5. Cloud terraform account (https://app.terraform.io/session)
-6. Repository access
+3. Domain (e.g. "moyinopoola.com")
+4. Terraform Cloud (https://app.terraform.io/session)
+5. Github 
+6. ArgoCD
+7. Datadog
 
 # Infrastructure deployment
 
-To deploy our terraform code first of all we need to create account on https://app.terraform.io/session and create organization and workspace.
+The Infrastucture is a Hybrid setup with the cloud infrastructure deployed on AWS and an onsite environment exposed to the cloud through aws Storage Gateway. The infrastructure is deployed by trigarring a run on terafform cloud which is connected to this github repo. 
+NOTE! to reduce cost, the some resources in the aws cloud were not deployed (e.g. Storage Gateway), since there's no onsite available to deploy an agent. 
 
-1. Login to the terraform cloud. After that we need to create workspace. We need to go to "Projects & workspaces" → new workspace → create workspace click on then Version control workflow and we have to connect it with our github repository where our
-   terraform code is located.
-2. Select VCS provider. Select GitHub and then select GitHub.com from the menu.
-3. Set up provider to connect GitHub.com to Terraform Cloud (For additional information about connecting to GitHub.com to Terraform Cloud, please read documentation - https://developer.hashicorp.com/terraform/cloud-docs/vcs).
-3. Choose repository.
-4. Open Advanced options.
-5. Define folder with terraform code ("dev" or "prod").
-6. Define branch name.
-7. Create workspace.
-8. Define required variables. Don't forget to define Environment variables for AWS ("AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", if you are using SSO add the "AWS_SESSION_TOKEN").
-9. Start plan.
-10. Apply. After planning we can confirm & apply – it will executes the changes defined by our Terraform configuration to create, update, or destroy resources. It will take about 30 min to create all resources.
+# Infrastucture Architecture
+![Screenshot](img/arch.png)
 
 # Application deployment
 
