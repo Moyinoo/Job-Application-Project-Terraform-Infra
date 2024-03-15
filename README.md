@@ -23,7 +23,7 @@ The Infrastucture is a Hybrid setup with the cloud infrastructure deployed on AW
 NOTE! to reduce cost, the some resources in the aws cloud were not deployed (e.g. Storage Gateway), since there's no onsite available to deploy an agent. 
 
 # Infrastucture Architecture
-![Screenshot](img/arch.png)
+![Screenshot](img/Cloud Architecture.png)
 
 # Application deployment
 
